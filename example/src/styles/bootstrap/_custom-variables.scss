@@ -1,0 +1,66 @@
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$grays: (
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900
+);
+
+$red: #ff355e;
+$orange: #ff6037;
+$yellow: #ffd700;
+$olive: #b5cc18;
+$green: #32cd32;
+$teal: #00b5ad;
+$cyan: #0dcaf0;
+$blue: #2185d0;
+$violet: #ee82ee;
+$pink: #ff1493;
+$purple: #a333c8;
+$indigo: #6610f2;
+$brown: #a5673f;
+$gray: #767676;
+
+$primary: #440099;
+$secondary: #00b5e2;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark
+);
+
+$min-contrast-ratio: 1.5;
+
+// It's better to just set the body background color in mains.scss.
+// The $body-bg color has an unexpected cascade effect that changes
+// input backgrounds, etc.
+// $body-bg: rgb(237, 242, 249);
+$body-color: #333;

@@ -1,0 +1,22 @@
+//I'm scss message 1
+
+/* I'm scss message 2 */
+.message {
+  background-color: #fafafa;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  outline: #333;
+  padding: 15px;
+  &:hover {
+    color: #ff355e; //rgb(21, 194, 19);
+  }
+}
+
+// .message {
+//   background-color: #fafafa;
+//   border-radius: 10px;
+//   font-size: 30px;
+//   border: 2px dashed red;
+//   padding: 15px;
+// }

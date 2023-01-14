@@ -1,0 +1,7 @@
+node_modules
+build
+dist
+!.storybook
+
+# Not sure if I should omit example...
+example
