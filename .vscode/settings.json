@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.stylelint": true // This will make stylelint format on save
+    // "source.fixAll": true, // This will turn on auto fix for all providers
+    "source.fixAll.eslint": false // Set to true if you want to fix eslint issues on save
+  },
+  "editor.formatOnSave": true // This will make prettier format on save.
+  // One could add prettier settings here, but it's preferrable to use a .prettierrc
+  // https://prettier.io/docs/en/options.html
+}

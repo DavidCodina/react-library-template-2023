@@ -2,15 +2,22 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {},
   "extends": [
+    "eslint:recommended",
     "react-app",
     "react-app/jest",
     "plugin:storybook/recommended",
     "plugin:jest-dom/recommended",
-    "plugin:testing-library/react"
+    "plugin:testing-library/react",
+    "prettier"
   ],
-  "plugins": ["jest-dom", "testing-library", "promise"],
+  "plugins": ["jest-dom", "testing-library", "promise", "prettier"],
 
   "rules": {
+    "prettier/prettier": "warn",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "prefer-const": "warn",
+    "no-var": "warn",
     "no-throw-literal": "off",
     "no-unreachable": "warn",
     "import/no-anonymous-default-export": "off",
