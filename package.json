@@ -1,7 +1,7 @@
 {
   "name": "YOUR_LIBRARY_NAME_HERE",
   "description": "A React component library",
-  "version": "1.0.0",
+  "version": "0.1.0001",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [

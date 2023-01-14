@@ -77,8 +77,108 @@ form label,
   background-color: #fafafa;
 }
 
+.w-90 {
+  width: 90% !important;
+}
+
+/* ======================
+    .transition-none
+====================== */
+
+.transition-none * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* ======================
+    .hide-scrollbar 
+====================== */
+
+.hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ======================
+    .table-flush
+====================== */
+
+.table-flush {
+  thead tr:first-child {
+    border-top: none;
+  }
+
+  thead tr th:first-child,
+  thead tr td:first-child {
+    border-left: none;
+  }
+
+  thead tr th:last-child,
+  thead tr td:last-child {
+    border-right: none;
+  }
+
+  tbody:first-child tr:first-child {
+    border-top: none;
+  }
+
+  tbody tr th:first-child,
+  tbody tr td:first-child {
+    border-left: none;
+  }
+
+  tbody tr th:last-child,
+  tbody tr td:last-child {
+    border-right: none;
+  }
+
+  tbody:last-child tr:last-child {
+    border-bottom: none;
+  }
+
+  tfoot tr:last-child {
+    border-bottom: none;
+  }
+
+  tfoot tr th:first-child,
+  tfoot tr td:first-child {
+    border-left: none;
+  }
+
+  tfoot tr th:last-child,
+  tfoot tr td:last-child {
+    border-right: none;
+  }
+}
+
 /* ======================
 
+====================== */
+
+.child-mb-1 > * {
+  margin-bottom: 0.25rem !important;
+}
+.child-mb-2 > * {
+  margin-bottom: 0.5rem !important;
+}
+.child-mb-3 > * {
+  margin-bottom: 1rem !important;
+}
+.child-mb-4 > * {
+  margin-bottom: 1.5rem !important;
+}
+.child-mb-5 > * {
+  margin-bottom: 3rem !important;
+}
+
+/* ======================
+    .custom-list 
 ====================== */
 /* Obviously, this will only work in conjunction with Bootstrap icons. */
 
@@ -101,9 +201,175 @@ ul.custom-list li::before {
   margin-left: -1em;
 }
 
-/* =============================================================================
-                                Media Queries
-============================================================================= */
+/* ======================
+        .outline
+====================== */
+/* One way to create a text outline is with -webkit-text-stroke-width &
+-webkit-text-stroke-color. The problem there is that it may not be
+applicable to all browsers.
+
+Another approach entails using <svg>s. However, they seem very difficult 
+to manage, and the text doesn't wrap.
+
+  https://www.w3schools.com/graphics/svg_text.asp 
+  https://stackoverflow.com/questions/4919076/outline-effect-to-text 
+
+  <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <svg
+      style={{
+        // display: 'inline-block',
+        fontFamily: 'Luckiest Guy',
+        fontSize: 50,
+        fontWeight: 'bold',
+        lineHeight: 1,
+        margin: '25px auto'
+      }}
+      height='38'
+      width='150'
+    >
+      <text
+        x='0'
+        y='37' // This corresponds to the bottom of the text
+        fill='#fff'
+        stroke='#000'
+        strokeWidth='1px'
+      >
+        Demo
+      </text>
+    </svg>
+  </div>
+
+
+// https://stackoverflow.com/questions/4919076/outline-effect-to-text
+A third approach involve the use of text-shadows. This is the most
+practical approach. For example:
+
+<h1
+  className='outline-strong outline-success outline-width-1 outline-shadow'
+  style={{
+    fontSize: 60,
+    fontWeight: 900,
+    margin: '50px auto',
+    textAlign: 'center'
+  }}
+>Testing</h1>
+*/
+
+// 1x
+.outline-weak {
+  --border-color: #000;
+  --border-width: 1px;
+  color: #fff;
+  text-shadow: var(--border-color) 0px 0px var(--border-width);
+  -webkit-font-smoothing: antialiased;
+}
+
+// 10x
+.outline {
+  --border-color: #000;
+  --border-width: 1px;
+  color: #fff;
+  text-shadow: var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width);
+  -webkit-font-smoothing: antialiased;
+}
+
+// 20x
+.outline-strong {
+  --border-color: #000;
+  --border-width: 1px;
+  color: #fff;
+  text-shadow: var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width),
+    var(--border-color) 0px 0px var(--border-width);
+  -webkit-font-smoothing: antialiased;
+}
+
+// Border colors...
+.outline-primary {
+  --border-color: var(--bs-primary);
+}
+
+.outline-secondary {
+  --border-color: var(--bs-secondary);
+}
+
+.outline-success {
+  --border-color: var(--bs-success);
+}
+
+.outline-info {
+  --border-color: var(--bs-info);
+}
+
+.outline-warning {
+  --border-color: var(--bs-warning);
+}
+
+.outline-danger {
+  --border-color: var(--bs-danger);
+}
+
+.outline-light {
+  --border-color: var(--bs-light);
+}
+
+.outline-dark {
+  --border-color: var(--bs-dark);
+}
+
+// Border widths...
+.outline-width-dot-5 {
+  --border-width: 0.5px;
+}
+
+.outline-width-1 {
+  --border-width: 1px;
+}
+
+.outline-width-1-dot-5 {
+  --border-width: 1.5px;
+}
+
+.outline-width-2 {
+  --border-width: 2px;
+}
+.outline-width-2-dot-5 {
+  --border-width: 2.5px;
+}
+
+.outline-shadow {
+  filter: drop-shadow(0px 1px 0.5px rgba(0, 0, 0, 0.75));
+}
+
+/* ========================================================================
+                          Media Queries
+======================================================================== */
 
 /* sm */
 @media (min-width: 576px) {
